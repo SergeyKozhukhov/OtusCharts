@@ -4,13 +4,13 @@ plugins {
 }
 
 android {
-    compileSdkVersion 30
+    compileSdkVersion 34
     buildToolsVersion "30.0.3"
 
     defaultConfig {
         applicationId "otus.homework.customview"
-        minSdkVersion 23
-        targetSdkVersion 30
+        minSdkVersion 24
+        targetSdkVersion 34
         versionCode 1
         versionName "1.0"
 
@@ -42,4 +42,22 @@ dependencies {
     testImplementation 'junit:junit:4.+'
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+
+    /* jackson */
+    implementation 'com.fasterxml.jackson.core:jackson-core:2.13.4'
+    implementation 'com.fasterxml.jackson.core:jackson-annotations:2.13.4'
+    implementation 'com.fasterxml.jackson.core:jackson-databind:2.13.4'
+
+    /* coroutines */
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-core:1.6.4'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.4'
+
+    // lifecycle
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-runtime-ktx:2.5.1'
+    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.5.1'
+
+    // Charts
+    implementation project(path: ':Charts')
+    implementation project(path: ':Transformer')
 }
